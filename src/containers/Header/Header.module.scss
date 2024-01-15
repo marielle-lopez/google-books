@@ -1,0 +1,11 @@
+@use "../../styles/partials/typography.scss";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page_heading {
+  font-family: typography.$accent-font;
+}
