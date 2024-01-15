@@ -16,3 +16,5 @@
 ### January 15, 2024
 
 - Created design mockup in Figma of the web application
+- Added variables for color palette and typography
+- Created foundational components for the header
