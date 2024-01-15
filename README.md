@@ -8,6 +8,8 @@
   - https://fonts.google.com/specimen/Roboto
 - Colour palette inspiration
   - https://dribbble.com/tags/book_ordering_app
+- Icons8
+  - https://icons8.com/
 
 ## Task Completion History
 
