@@ -1,8 +1,9 @@
+import styles from "./SearchResults.module.scss";
 import Card from "../../components/Card/Card";
 
 const SearchResults = ({ books }) => {
   return (
-    <div>
+    <div className={styles.wrapper}>
       {books.map((book) => (
         <Card
           key={book.id}
