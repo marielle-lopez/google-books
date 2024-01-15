@@ -13,6 +13,10 @@
 
 ## Task Completion History
 
+### January 16, 2024
+
+- Implemented data fetching from Google Books API based on user's input
+
 ### January 15, 2024
 
 - Created design mockup in Figma of the web application
