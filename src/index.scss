@@ -1,0 +1,11 @@
+@use "./styles/partials/palette.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  min-height: 100vh;
+  background-color: palette.$primary-bg-color;
+}
