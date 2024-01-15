@@ -1,0 +1,32 @@
+@use "../../styles/partials/palette.scss";
+@use "../../styles/partials/typography.scss";
+
+.wrapper {
+  display: flex;
+}
+
+.text_input {
+  padding: 0 15px;
+  height: 40px;
+  width: 30vw;
+
+  font-family: typography.$primary-font;
+  border: none;
+  border-radius: 10px 0 0 10px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+
+  background-color: palette.$primary-btn-color;
+  border: none;
+  border-radius: 0 10px 10px 0;
+
+  &_icon {
+    width: 25px;
+  }
+}
