@@ -14,6 +14,7 @@ export const getBooks = async (searchTerm) => {
       title: bookData.volumeInfo.title,
       authors: bookData.volumeInfo.authors,
       description: bookData.volumeInfo.description,
+      imageURL: bookData.volumeInfo.imageLinks.thumbnail,
     };
   });
 

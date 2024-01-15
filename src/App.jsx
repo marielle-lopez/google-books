@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 
 import { getBooks } from "./data/getBooks";
 import Header from "./containers/Header/Header";
+import SearchResults from "./containers/SearchResults/SearchResults";
 
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -26,14 +27,10 @@ function App() {
     setLoading(false);
   }, [searchTerm]);
 
-  console.log(books);
-
   return (
     <>
       <Header setSearchTerm={setSearchTerm} />
-      {!loading &&
-        books &&
-        books.map((book) => <p key={book.id}>{book.title}</p>)}
+      {!loading && books && <SearchResults books={books} />}
     </>
   );
 }
