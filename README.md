@@ -10,6 +10,8 @@
   - https://dribbble.com/tags/book_ordering_app
 - Icons8
   - https://icons8.com/
+- A Complete Guide to CSS Grid
+  - https://css-tricks.com/snippets/css/complete-guide-grid/#aa-grid-properties
 
 ## Task Completion History
 
