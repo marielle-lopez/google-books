@@ -17,7 +17,7 @@
 
 - Implemented data fetching from Google Books API based on user's input
 - Created card component to display search results
-- Added styling to card component according to design mockup
+- Added styling to card and search bar component according to design mockup
 
 ### January 15, 2024
 
