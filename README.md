@@ -1,5 +1,14 @@
 # The Library
 
+## Resources
+
+- Playfair Display font
+  - https://fonts.google.com/specimen/Playfair+Display
+- Colour palette inspiration
+  - https://dribbble.com/tags/book_ordering_app
+
 ## Task Completion History
 
 ### January 15, 2024
+
+- Created design mockup in Figma of the web application
