@@ -16,6 +16,7 @@
 ### January 16, 2024
 
 - Implemented data fetching from Google Books API based on user's input
+- Created card component to display search results
 
 ### January 15, 2024
 
