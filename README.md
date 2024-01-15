@@ -4,6 +4,8 @@
 
 - Playfair Display font
   - https://fonts.google.com/specimen/Playfair+Display
+- Roboto font
+  - https://fonts.google.com/specimen/Roboto
 - Colour palette inspiration
   - https://dribbble.com/tags/book_ordering_app
 
