@@ -2,7 +2,14 @@
 
 ## To-Do
 
+- Pagination of search results
 - Modify `alt` for book cover images that are not provided
+- Add styling to text for descriptions not provided
+
+### Optional
+
+- Modal for selected book
+- Utilise external library (e.g., MUI) for components (i.e., Spinner)
 
 ## Resources
 
@@ -16,6 +23,8 @@
   - https://icons8.com/
 - A Complete Guide to CSS Grid
   - https://css-tricks.com/snippets/css/complete-guide-grid/#aa-grid-properties
+- Character counter
+  - https://www.charactercountonline.com/
 
 ## Task Completion History
 
