@@ -1,9 +1,11 @@
 @use "../../styles/partials/typography.scss";
 
 .wrapper {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 20px;
   margin: 5vh 0;
 }
