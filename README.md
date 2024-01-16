@@ -7,11 +7,13 @@
 - Add styling to text for descriptions not provided
 - Add search results information text line
 - Handle no search results
+- Add conditional rendering for author and description text in card components based on text length
 
 ### Optional
 
 - Modal for selected book
 - Utilise external library (e.g., MUI) for components (i.e., Spinner)
+- Add animations on window load
 
 ## Resources
 
