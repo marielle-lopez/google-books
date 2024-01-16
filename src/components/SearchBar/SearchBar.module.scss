@@ -26,7 +26,13 @@
   border: none;
   border-radius: 0 10px 10px 0;
 
+  transition: 0.3s;
+
   &_icon {
     width: 25px;
+  }
+
+  &:hover {
+    background-color: palette.$primary-btn-color--hover;
   }
 }
