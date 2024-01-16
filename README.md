@@ -5,6 +5,8 @@
 - Pagination of search results
 - Modify `alt` for book cover images that are not provided
 - Add styling to text for descriptions not provided
+- Add search results information text line
+- Handle no search results
 
 ### Optional
 
