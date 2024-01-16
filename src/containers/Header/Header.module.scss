@@ -4,8 +4,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
+  margin: 5vh 0;
 }
 
 .page_heading {
   font-family: typography.$accent-font;
+  font-size: 48px;
 }
