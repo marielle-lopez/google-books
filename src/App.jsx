@@ -11,6 +11,7 @@ function App() {
   const [books, setBooks] = useState(null);
   const [resultsCount, setResultsCount] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [pageCount, setPageCount] = useState(null);
 
   useEffect(() => {
     if (searchTerm === "") {
@@ -27,6 +28,7 @@ function App() {
 
       setBooks(response.data);
       setResultsCount(response.resultsCount);
+      setPageCount(response.pageCount);
     };
 
     wrapper();

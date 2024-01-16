@@ -13,6 +13,7 @@ export const getBooks = async (searchTerm) => {
   const data = await response.json();
   const booksData = data.items;
   const resultsCount = data.totalItems;
+  const pageCount = Math.ceil(data.totalItems / 10);
 
   const cleanedData = booksData.map((bookData) => {
     return {
@@ -29,5 +30,6 @@ export const getBooks = async (searchTerm) => {
   return {
     resultsCount: resultsCount,
     data: cleanedData,
+    pageCount: pageCount,
   };
 };
