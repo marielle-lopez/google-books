@@ -1,5 +1,6 @@
 import "./App.scss";
 import { useState, useEffect } from "react";
+import { Pagination } from "@mui/material";
 
 import { getBooks } from "./data/getBooks";
 import Header from "./containers/Header/Header";
@@ -13,6 +14,23 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [pageCount, setPageCount] = useState(null);
 
+  const handlePageChange = (e) => {
+    const pageNumber = parseInt(e.target.innerText);
+    const startIndex = (pageNumber - 1) * 10;
+    const maxResults = 10;
+
+    setLoading(true);
+
+    const wrapper = async () => {
+      const response = await getBooks(searchTerm, startIndex, maxResults);
+
+      setBooks(response.data);
+    };
+
+    wrapper();
+    setLoading(false);
+  };
+
   useEffect(() => {
     if (searchTerm === "") {
       return;
@@ -21,10 +39,7 @@ function App() {
     setLoading(true);
 
     const wrapper = async () => {
-      const response = await getBooks(searchTerm);
-
-      console.log(response.data);
-      console.log(response.resultsCount);
+      const response = await getBooks(searchTerm, 0, 10);
 
       setBooks(response.data);
       setResultsCount(response.resultsCount);
@@ -48,6 +63,7 @@ function App() {
             resultsCount={resultsCount}
             searchTerm={searchTerm}
           />
+          <Pagination count={pageCount} onChange={(e) => handlePageChange(e)} />
         </>
       )}
       <Footer />

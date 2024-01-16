@@ -1,16 +1,19 @@
-export const getBooks = async (searchTerm) => {
+export const getBooks = async (searchTerm, startIndex, maxResults) => {
   const transformedSearchTerm = searchTerm.toLowerCase().replace(" ", "+");
 
   const response = await fetch(
-    `https://www.googleapis.com/books/v1/volumes?q=${transformedSearchTerm}`
+    `https://www.googleapis.com/books/v1/volumes?q=${transformedSearchTerm}&maxResults=${maxResults}&startIndex=${startIndex}`
   );
 
   if (!response.ok) {
-    console.want("Something went wrong.");
+    console.warn("Something went wrong.");
     throw new Error("Could not retrieve data.");
   }
 
   const data = await response.json();
+
+  console.log(data);
+
   const booksData = data.items;
   const resultsCount = data.totalItems;
   const pageCount = Math.ceil(data.totalItems / 10);
