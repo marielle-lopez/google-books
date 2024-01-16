@@ -2,6 +2,7 @@
 
 ## To-Do
 
+- Add loading message when search term is submitted
 - Pagination of search results
 - Modify `alt` for book cover images that are not provided
 - Add styling to text for descriptions not provided
@@ -37,6 +38,7 @@
 - Implemented data fetching from Google Books API based on user's input
 - Created card component to display search results
 - Added styling to card and search bar component according to design mockup
+- Made MUI pagination component functional
 
 ### January 15, 2024
 
