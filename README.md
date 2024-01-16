@@ -1,5 +1,9 @@
 # The Library
 
+## To-Do
+
+- Modify `alt` for book cover images that are not provided
+
 ## Resources
 
 - Playfair Display font
