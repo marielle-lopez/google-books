@@ -5,6 +5,11 @@ export const getBooks = async (searchTerm) => {
     `https://www.googleapis.com/books/v1/volumes?q=${transformedSearchTerm}`
   );
 
+  if (!response.ok) {
+    console.want("Something went wrong.");
+    throw new Error("Could not retrieve data.");
+  }
+
   const data = await response.json();
   const booksData = data.items;
 
@@ -14,7 +19,9 @@ export const getBooks = async (searchTerm) => {
       title: bookData.volumeInfo.title,
       authors: bookData.volumeInfo.authors,
       description: bookData.volumeInfo.description,
-      imageURL: bookData.volumeInfo.imageLinks.thumbnail,
+      imageURL: bookData.volumeInfo.imageLinks?.thumbnail
+        ? bookData.volumeInfo.imageLinks.thumbnail
+        : "src\\assets\\not-found.png",
     };
   });
 

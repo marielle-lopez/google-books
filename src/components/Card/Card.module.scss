@@ -4,6 +4,7 @@
 .wrapper {
   display: flex;
   width: 350px;
+  height: 200px;
 
   background-color: white;
   border: 1px solid palette.$outline-color;
@@ -12,8 +13,11 @@
 }
 
 .img {
-  border-radius: 20px 0 0 20px;
+  max-width: 130px;
+  height: 200px;
+
   object-fit: cover;
+  border-radius: 20px 0 0 20px;
 }
 
 .info {
