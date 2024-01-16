@@ -9,6 +9,7 @@ import Footer from "./components/Footer/Footer";
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const [books, setBooks] = useState(null);
+  const [resultsCount, setResultsCount] = useState(null);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -19,8 +20,13 @@ function App() {
     setLoading(true);
 
     const wrapper = async () => {
-      const data = await getBooks(searchTerm);
-      setBooks(data);
+      const response = await getBooks(searchTerm);
+
+      console.log(response.data);
+      console.log(response.resultsCount);
+
+      setBooks(response.data);
+      setResultsCount(response.resultsCount);
     };
 
     wrapper();
@@ -30,8 +36,18 @@ function App() {
 
   return (
     <>
+      {/* <img src="https://media1.giphy.com/media/hvFJZUgugYdrkM1XbQ/giphy.gif?cid=ecf05e47n8wkckl4ntxb5o3cpo7funzsosaf6bn4n47enba7&ep=v1_stickers_search&rid=giphy.gif&ct=s" /> */}
       <Header setSearchTerm={setSearchTerm} />
-      {!loading && books && <SearchResults books={books} />}
+
+      {!loading && resultsCount && books && (
+        <>
+          <SearchResults
+            books={books}
+            resultsCount={resultsCount}
+            searchTerm={searchTerm}
+          />
+        </>
+      )}
       <Footer />
     </>
   );
