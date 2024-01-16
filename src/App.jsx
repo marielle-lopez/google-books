@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { getBooks } from "./data/getBooks";
 import Header from "./containers/Header/Header";
 import SearchResults from "./containers/SearchResults/SearchResults";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -31,6 +32,7 @@ function App() {
     <>
       <Header setSearchTerm={setSearchTerm} />
       {!loading && books && <SearchResults books={books} />}
+      <Footer />
     </>
   );
 }
