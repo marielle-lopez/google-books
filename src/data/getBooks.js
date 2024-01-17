@@ -12,11 +12,16 @@ export const getBooks = async (searchTerm, startIndex, maxResults) => {
 
   const data = await response.json();
 
-  console.log(data);
-
   const booksData = data.items;
   const resultsCount = data.totalItems;
   const pageCount = Math.ceil(data.totalItems / 10);
+
+  if (resultsCount === 0) {
+    // throw new Error("There aren't any books to show on this page.");
+    throw new Error(
+      "Oh no... We've searched far and wide, but couldn't find any books matching your search."
+    );
+  }
 
   const cleanedData = booksData.map((bookData) => {
     return {
@@ -30,7 +35,7 @@ export const getBooks = async (searchTerm, startIndex, maxResults) => {
         : "No description",
       imageURL: bookData.volumeInfo.imageLinks?.thumbnail
         ? bookData.volumeInfo.imageLinks.thumbnail
-        : "src\\assets\\not-found.png",
+        : "src\\assets\\missing-book-cover.png",
     };
   });
 
