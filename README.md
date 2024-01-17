@@ -6,8 +6,6 @@
 - Pagination of search results
 - Modify `alt` for book cover images that are not provided
 - Add styling to text for descriptions not provided
-- Add search results information text line
-- Handle no search results
 - Add conditional rendering for author and description text in card components based on text length
 - Create an enum for button types
 
@@ -39,6 +37,8 @@
 - Added error handling in data fetching function
 
 I'm currently experiencing an issue with the pagination feature, which I've only noticed until now. At the moment, the last few pages return no results (i.e., `totalItems` value is 0). I've calculated the total number of pages to show for the pagination feature by observing the `totalItems` property in the response from the Google Books API based on the user's search terms. However, I've noticed that every time the same search terms are entered, the Google Books API returns a different value assigned to the `totalItems` property.
+
+In addition to this, I'm now seeing the pagination feature not working as intended; when a page number is clicked, the selected page is not updated in the pagination component, but it still shows the results of such page.
 
 ### January 16, 2024
 
