@@ -76,14 +76,14 @@ function App() {
       )}
 
       {!loading && resultsCount && books && (
-        <div>
+        <FlexWrapper>
           <SearchResults
             books={books}
             resultsCount={resultsCount}
             searchTerm={searchTerm}
           />
           <Pagination count={pageCount} onChange={(e) => handlePageChange(e)} />
-        </div>
+        </FlexWrapper>
       )}
       <Footer />
     </>

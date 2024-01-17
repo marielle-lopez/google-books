@@ -23,6 +23,8 @@ export const getBooks = async (searchTerm, startIndex, maxResults) => {
     );
   }
 
+  console.log(booksData);
+
   const cleanedData = booksData.map((bookData) => {
     return {
       id: bookData.id,
@@ -36,10 +38,22 @@ export const getBooks = async (searchTerm, startIndex, maxResults) => {
       imageURL: bookData.volumeInfo.imageLinks?.thumbnail
         ? bookData.volumeInfo.imageLinks.thumbnail
         : "src\\assets\\missing-book-cover.png",
+      rating: bookData.volumeInfo.averageRating
+        ? bookData.volumeInfo.averageRating
+        : null,
+      numberOfPages: bookData.volumeInfo.pageCount
+        ? bookData.volumeInfo.pageCount
+        : null,
+      datePublished: bookData.volumeInfo.publishedData
+        ? bookData.volumeInfo.publishedData
+        : "No publication date",
+      publisher: bookData.volumeInfo.publisher
+        ? bookData.volumeInfo.publisher
+        : "No publisher",
     };
   });
 
-  console.log(cleanedData);
+  // console.log(cleanedData);
 
   return {
     resultsCount: resultsCount,
