@@ -21,14 +21,20 @@ export const getBooks = async (searchTerm, startIndex, maxResults) => {
   const cleanedData = booksData.map((bookData) => {
     return {
       id: bookData.id,
-      title: bookData.volumeInfo.title,
-      authors: bookData.volumeInfo.authors,
-      description: bookData.volumeInfo.description,
+      title: bookData.volumeInfo.title ? bookData.volumeInfo.title : "No title",
+      authors: bookData.volumeInfo.authors
+        ? bookData.volumeInfo.authors
+        : ["No authors"],
+      description: bookData.volumeInfo.description
+        ? bookData.volumeInfo.description
+        : "No description",
       imageURL: bookData.volumeInfo.imageLinks?.thumbnail
         ? bookData.volumeInfo.imageLinks.thumbnail
         : "src\\assets\\not-found.png",
     };
   });
+
+  console.log(cleanedData);
 
   return {
     resultsCount: resultsCount,
