@@ -32,6 +32,10 @@
 
 ## Task Completion History
 
+### January 21, 2024
+
+As I'm approaching the deadline for this project, I'm going to need to move the pagination and modal feature to separate branches. This is so I can show a functional application that doesn't appear half-finished!
+
 ### January 17, 2024
 
 - Added error handling in data fetching function
