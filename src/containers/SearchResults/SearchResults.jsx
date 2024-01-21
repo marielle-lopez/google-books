@@ -1,5 +1,6 @@
 import styles from "./SearchResults.module.scss";
 import Card from "../../components/Card/Card";
+import Button from "../../components/Button/Button";
 
 const SearchResults = ({ books, resultsCount, searchTerm }) => {
   return (
@@ -7,6 +8,9 @@ const SearchResults = ({ books, resultsCount, searchTerm }) => {
       <p className={styles.search_results_info}>
         Top 40 of {resultsCount} search results for "{searchTerm}"
       </p>
+      <a href="/">
+        <Button type={"primary"} label={"Reset search"} />
+      </a>
       <div className={styles.grid}>
         {books.map((book) => (
           <Card

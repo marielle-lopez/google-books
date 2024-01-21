@@ -1,6 +1,6 @@
 import "./App.scss";
 import { useState, useEffect } from "react";
-import { Pagination } from "@mui/material";
+import { Pagination, CircularProgress } from "@mui/material";
 
 import { getBooks } from "./data/getBooks";
 import Header from "./containers/Header/Header";
@@ -93,6 +93,8 @@ function App() {
           {/* <Pagination count={pageCount} onChange={(e) => handlePageChange(e)} /> */}
         </FlexWrapper>
       )}
+
+      {loading && <CircularProgress color="inherit" />}
       <Footer />
     </>
   );
