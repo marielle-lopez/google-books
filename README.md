@@ -1,33 +1,18 @@
+![The Library logo](./public/favicon.ico)
+
 # The Library
 
-## To-Do
-
-### Optional
-
-- Modal for selected book
-- Utilise external library (e.g., MUI) for components (i.e., Spinner)
-- Add animations on window load
-- Add loading message/spinner when search term is submitted
-- Pagination of search results
-- Modify `alt` for book cover images that are not provided
-- Add styling to text for descriptions not provided
-- Add conditional rendering for author and description text in card components based on text length
-- Create an enum for button types
+Welcome to The Library! Search for any book available in the [Google Books API](https://developers.google.com/books), and we'll give you the top 40 search results.
 
 ## Resources
 
-- Playfair Display font
-  - https://fonts.google.com/specimen/Playfair+Display
-- Roboto font
-  - https://fonts.google.com/specimen/Roboto
-- Colour palette inspiration
-  - https://dribbble.com/tags/book_ordering_app
-- Icons8
-  - https://icons8.com/
-- A Complete Guide to CSS Grid
-  - https://css-tricks.com/snippets/css/complete-guide-grid/#aa-grid-properties
-- Character counter
-  - https://www.charactercountonline.com/
+- [Google Books API](https://developers.google.com/books)
+- [Playfair Display font](https://fonts.google.com/specimen/Playfair+Display)
+- [Roboto font](https://fonts.google.com/specimen/Roboto)
+- [Colour palette inspiration](https://dribbble.com/tags/book_ordering_app)
+- [Icons8](https://icons8.com/)
+- [A Complete Guide to CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/#aa-grid-properties)
+- [Character counter](https://www.charactercountonline.com/)
 
 ## Task Completion History
 
@@ -65,3 +50,17 @@ I've also started thinking about adding a modal that displays more information o
 - Created design mockup in Figma of the web application
 - Added variables for color palette and typography
 - Created foundational components for the header
+
+## To-Do
+
+### Optional
+
+- Modal for selected book
+- Utilise external library (e.g., MUI) for components (i.e., Spinner)
+- Add animations on window load
+- Add loading message/spinner when search term is submitted
+- Pagination of search results
+- Modify `alt` for book cover images that are not provided
+- Add styling to text for descriptions not provided
+- Add conditional rendering for author and description text in card components based on text length
+- Create an enum for button types
