@@ -41,6 +41,8 @@ As I'm approaching the deadline for this project, I'm going to need to move the 
 
 To satisfy the minimum viable product requirements, the last point to address and implement was to make the application responsive. I've added media queries for phone, tablet, and small laptop sizes.
 
+I've also added a 'Reset search' button when a successful search has occurred to improve user experience.
+
 ### January 17, 2024
 
 - Added error handling in data fetching function
