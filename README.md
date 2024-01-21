@@ -34,7 +34,7 @@
 
 ### January 21, 2024
 
-As I'm approaching the deadline for this project, I'm going to need to move the pagination and modal feature to separate branches. This is so I can show a functional application that doesn't appear half-finished!
+As I'm approaching the deadline for this project, I'm going to need to move the pagination and modal feature to separate branches due to lack of time. This is so I can show a functional application that doesn't appear half-finished! Additionally, I've changed the maximum number of results to show from 10 to 40.
 
 ### January 17, 2024
 
