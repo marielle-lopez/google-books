@@ -34,7 +34,12 @@
 
 ### January 21, 2024
 
+- Moved pagination and modal features to a separate Git branch
+- Implemented media queries to ensure application responsiveness
+
 As I'm approaching the deadline for this project, I'm going to need to move the pagination and modal feature to separate branches due to lack of time. This is so I can show a functional application that doesn't appear half-finished! Additionally, I've changed the maximum number of results to show from 10 to 40.
+
+To satisfy the minimum viable product requirements, the last point to address and implement was to make the application responsive. I've added media queries for phone, tablet, and small laptop sizes.
 
 ### January 17, 2024
 
