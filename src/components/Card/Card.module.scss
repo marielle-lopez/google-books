@@ -1,5 +1,6 @@
 @use "../../styles/partials/typography.scss";
 @use "../../styles/partials/palette.scss";
+@use "../../styles/partials/mixins/media-queries.scss";
 
 .wrapper {
   display: flex;
@@ -10,6 +11,10 @@
   border: 1px solid palette.$outline-color;
   border-radius: 20px;
   font-family: typography.$primary-font;
+
+  @include media-queries.phone {
+    width: 325px;
+  }
 }
 
 .img {

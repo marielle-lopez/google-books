@@ -1,5 +1,6 @@
 @use "../../styles/partials/palette.scss";
 @use "../../styles/partials/typography.scss";
+@use "../../styles/partials/mixins/media-queries.scss";
 
 .wrapper {
   display: flex;
@@ -13,6 +14,10 @@
   font-family: typography.$primary-font;
   border: none;
   border-radius: 10px 0 0 10px;
+
+  @include media-queries.phone {
+    width: 60vw;
+  }
 }
 
 .btn {
