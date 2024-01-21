@@ -11,6 +11,10 @@
     grid-template-columns: 1fr;
     grid-gap: 20px;
   }
+
+  @include media-queries.tablet {
+    grid-gap: 20px;
+  }
 }
 
 .search_results_info {

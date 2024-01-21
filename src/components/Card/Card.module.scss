@@ -15,6 +15,10 @@
   @include media-queries.phone {
     width: 325px;
   }
+
+  @include media-queries.tablet {
+    width: 325px;
+  }
 }
 
 .img {
