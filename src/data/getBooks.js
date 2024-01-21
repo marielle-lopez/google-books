@@ -6,8 +6,9 @@ export const getBooks = async (searchTerm, startIndex, maxResults) => {
   );
 
   if (!response.ok) {
-    console.warn("Something went wrong.");
-    throw new Error("Could not retrieve data.");
+    throw new Error(
+      `Sorry, couldn't process your request. Error code: ${response.status}`
+    );
   }
 
   const data = await response.json();
@@ -17,7 +18,6 @@ export const getBooks = async (searchTerm, startIndex, maxResults) => {
   const pageCount = Math.ceil(data.totalItems / 10);
 
   if (resultsCount === 0) {
-    // throw new Error("There aren't any books to show on this page.");
     throw new Error(
       "Oh no... We've searched far and wide, but couldn't find any books matching your search."
     );

@@ -5,7 +5,7 @@ const SearchResults = ({ books, resultsCount, searchTerm }) => {
   return (
     <div className={styles.wrapper}>
       <p className={styles.search_results_info}>
-        {resultsCount} search results for "{searchTerm}"
+        Top 40 of {resultsCount} search results for "{searchTerm}"
       </p>
       <div className={styles.grid}>
         {books.map((book) => (

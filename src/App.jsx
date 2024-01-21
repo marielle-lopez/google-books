@@ -18,45 +18,53 @@ function App() {
   const [pageCount, setPageCount] = useState(null);
   const [error, setError] = useState(null);
 
-  const handlePageChange = (e) => {
-    const pageNumber = parseInt(e.target.innerText);
-    const startIndex = (pageNumber - 1) * 10;
-    const maxResults = 10;
+  // const handlePageChange = (e) => {
+  //   const pageNumber = parseInt(e.target.innerText);
+  //   const startIndex = (pageNumber - 1) * 10;
+  //   const maxResults = 10;
 
-    setLoading(true);
+  //   setLoading(true);
 
-    const wrapper = async () => {
-      setBooks(null);
-      let response;
+  //   const wrapper = async () => {
+  //     setBooks(null);
+  //     let response;
 
-      try {
-        response = await getBooks(searchTerm, startIndex, maxResults);
-        setBooks(response.data);
-      } catch (e) {
-        console.log(e.message);
-        setError(e.message);
-      } finally {
-        setLoading(false);
-      }
-    };
+  //     try {
+  //       response = await getBooks(searchTerm, startIndex, maxResults);
+  //       setBooks(response.data);
+  //     } catch (e) {
+  //       console.log(e.message);
+  //       setError(e.message);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
 
-    wrapper();
-  };
+  //   wrapper();
+  // };
 
   useEffect(() => {
     if (searchTerm === "") {
       return;
     }
 
+    setError(null);
     setBooks(null);
     setLoading(true);
 
     const wrapper = async () => {
-      const response = await getBooks(searchTerm, 0, 10);
+      try {
+        const response = await getBooks(searchTerm, 0, 40);
 
-      setBooks(response.data);
-      setResultsCount(response.resultsCount);
-      setPageCount(response.pageCount);
+        setBooks(response.data);
+        setResultsCount(response.resultsCount);
+        setPageCount(response.pageCount);
+      } catch (e) {
+        console.log(e.message);
+        setError(e.message);
+      } finally {
+        setLoading(false);
+      }
     };
 
     wrapper();
@@ -82,7 +90,7 @@ function App() {
             resultsCount={resultsCount}
             searchTerm={searchTerm}
           />
-          <Pagination count={pageCount} onChange={(e) => handlePageChange(e)} />
+          {/* <Pagination count={pageCount} onChange={(e) => handlePageChange(e)} /> */}
         </FlexWrapper>
       )}
       <Footer />
