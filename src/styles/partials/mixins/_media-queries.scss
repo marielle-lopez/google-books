@@ -9,3 +9,9 @@
     @content;
   }
 }
+
+@mixin small-laptop {
+  @media only screen and (min-width: 992px) and (max-width: 1619px) {
+    @content;
+  }
+}
