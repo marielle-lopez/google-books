@@ -2,18 +2,17 @@
 
 ## To-Do
 
-- Add loading message when search term is submitted
-- Pagination of search results
-- Modify `alt` for book cover images that are not provided
-- Add styling to text for descriptions not provided
-- Add conditional rendering for author and description text in card components based on text length
-- Create an enum for button types
-
 ### Optional
 
 - Modal for selected book
 - Utilise external library (e.g., MUI) for components (i.e., Spinner)
 - Add animations on window load
+- Add loading message/spinner when search term is submitted
+- Pagination of search results
+- Modify `alt` for book cover images that are not provided
+- Add styling to text for descriptions not provided
+- Add conditional rendering for author and description text in card components based on text length
+- Create an enum for button types
 
 ## Resources
 
