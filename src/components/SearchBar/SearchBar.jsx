@@ -19,11 +19,7 @@ const SearchBar = ({ setSearchTerm }) => {
         placeholder="What book are you looking for?"
       />
       <button className={styles.btn} type="submit">
-        <img
-          className={styles.btn_icon}
-          src="src\assets\search.png"
-          alt="Search icon"
-        />
+        <img className={styles.btn_icon} src="/search.png" alt="Search icon" />
       </button>
     </form>
   );
