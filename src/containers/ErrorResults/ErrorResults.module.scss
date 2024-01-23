@@ -1,0 +1,12 @@
+@use "../../styles/partials/typography.scss";
+
+.icon {
+  width: 60px;
+}
+
+.text {
+  font-family: typography.$primary-font;
+  font-size: 14px;
+  max-width: 40vw;
+  text-align: center;
+}

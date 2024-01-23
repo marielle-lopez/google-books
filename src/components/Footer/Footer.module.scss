@@ -1,0 +1,12 @@
+@use "../../styles/partials/palette.scss";
+@use "../../styles/partials/typography.scss";
+
+.wrapper {
+  margin: 10vh 0 2vh 0;
+}
+
+.text {
+  font-family: typography.$primary-font;
+  font-size: 12px;
+  color: palette.$secondary-text-color;
+}

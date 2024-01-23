@@ -5,7 +5,9 @@ const Card = ({ title, authors, description, imageURL }) => {
     <article className={styles.wrapper}>
       <img className={styles.img} src={imageURL} alt={`${title} book cover`} />
       <div className={styles.info}>
-        <h3 className={styles.title}>{title}</h3>
+        <h3 className={styles.title}>
+          {title.length < 60 ? title : title.slice(0, 60) + "..."}
+        </h3>
         <p className={styles.authors}>{authors.join(", ")}</p>
         <p className={styles.description}>
           {description ? description.slice(0, 130) + "..." : "No description"}

@@ -1,0 +1,19 @@
+@use "../../styles/partials/palette.scss";
+@use "../../styles/partials/typography.scss";
+
+.button {
+  padding: 10px 15px;
+
+  border: none;
+  border-radius: 10px;
+  font-family: typography.$primary-font;
+  color: white;
+
+  &_primary {
+    background-color: palette.$secondary-btn-color;
+
+    &:hover {
+      background-color: palette.$secondary-btn-color--hover;
+    }
+  }
+}
